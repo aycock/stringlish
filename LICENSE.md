@@ -15,8 +15,8 @@ Published research work (peer-reviewed or otherwise, in any form of media
 including online-only publications) whose results are derived wholly or
 partially from the use of the Software must cite the following paper:
 
-        J. Aycock. Stringlish: Improved English String Searching,
-        Software: Practice & Experience (to appear).
+        J. Aycock. Stringlish: Improved English String Searching in
+        Binary Files, Software: Practice & Experience (to appear).
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
