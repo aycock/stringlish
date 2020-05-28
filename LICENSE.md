@@ -1,4 +1,4 @@
-Copyright 2014-2015 John Aycock, aycock@ucalgary.ca.
+Copyright 2014-2020 John Aycock, aycock@ucalgary.ca.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -15,8 +15,8 @@ Published research work (peer-reviewed or otherwise, in any form of media
 including online-only publications) whose results are derived wholly or
 partially from the use of the Software must cite the following paper:
 
-        J. Aycock. Stringlish: Improved English String Searching in
-        Binary Files, Software: Practice & Experience (to appear).
+    J. Aycock. Stringlish: Improved English String Searching in Binary
+    Files, Software: Practice & Experience 45(11), 2015, pp. 1591-1595.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF

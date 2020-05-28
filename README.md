@@ -1,6 +1,6 @@
 Stringlish is a tool to find likely English strings in binary files.  It's like strings, but better.
 
-To run it, you'll need stringlish.py and ngram.py along with a version of Python < 3, and specify
+To run it, you'll need stringlish.py and ngram.py along with a version of Python >= 3, and specify
 one or more filenames on the command line, e.g.,
 
 % python stringlish.py file1

@@ -1,4 +1,4 @@
-# for Python < 3
+# for Python >= 3
 # see LICENSE file for licensing information
 
 import re
@@ -61,6 +61,7 @@ pattern = re.compile(r'( [A-Z][A-Z]+ ) | ( [a-z][a-z]+ ) | ( . )',
 def process(ps, label):
 	L = []
 	interesting = False
+	ps = str(ps, 'ISO-8859-1')		# sigh
 	for mo in re.finditer(pattern, ps):
 		bold = False
 		if mo.groups()[0] is not None:
@@ -84,7 +85,7 @@ def process(ps, label):
 
 	if interesting:
 		if label is not None:
-			print '[', label, '] ',
+			print('[', label, '] ', end='')
 		for bold, s in L:
 			if not bold:
 				sys.stdout.write(s)
@@ -100,6 +101,8 @@ def process(ps, label):
 
 # newlines are annoying in line-based output; remove them
 printable = ''.join([ch for ch in string.printable if ch != '\n'])
+# Python 3 is such a joy
+printable = bytes(printable, 'ISO-8859-1')
 
 def newfile(file):
 	# this is broken out so we can retain seen's contents across
@@ -110,7 +113,7 @@ def newfile(file):
 def filter_printable(s, label=None):
 	start = 0
 	isprintable = True
-	s += chr(255)			# append unprintable sentinel
+	s += b'\xff'			# append unprintable sentinel
 	for i in range(len(s)):
 		if not isprintable:
 			if s[i] in printable:
@@ -130,7 +133,7 @@ def filter_printable(s, label=None):
 
 if __name__ == '__main__':
 	for file in sys.argv[1:]:
-		#print '==>', file, '<=='
+		#print('==>', file, '<==')
 		try:
 			f = open(file, 'rb')
 			s = f.read()
